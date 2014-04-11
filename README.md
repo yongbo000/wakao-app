@@ -11,6 +11,7 @@
 > 数据来自，糗事百科、我们都爱冷笑话、百思不得姐、头条网、91美图、传送门（微信公众号文章）...  
 > App已经在Google Play上线，[线上下载地址点这里](https://play.google.com/store/apps/details?id=me.wakao.app&hl=zh-CN)。  
 
+![app 图片](https://raw.githubusercontent.com/yongbo000/wakao-app/master/QQ20140412-1@2x.png)
 
 ## Server端基于NodeJS
 
@@ -40,21 +41,17 @@
 	* bcs云存储
 			
 			我的图片、文件数据全部存放在百度云存储上，目前云存储还没有开始收费
-	
 
 
-
-
-
-
-
-
-
-## 说明
+## 运行说明
 
 
 - 主程序位于包wakao-app下。
-- 分别依赖2个开源项目（在）
+- 分别依赖2个开源项目（需将这两个包设置成Library）
+	
+	* SlideMenu
+	
+	* Android-ViewPagerIndicator
 
 
 
