@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/round_corner_layout_item_padding"
+    android:paddingRight="@dimen/round_corner_layout_item_padding"
+    android:paddingTop="@dimen/reader_and_update_item_padding"
+    android:paddingBottom="@dimen/reader_and_update_item_padding" >
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        style="@style/ArticleItemBg" >
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lineSpacingExtra="3.5dip"
+                android:maxLines="2"
+                android:textColor="@color/color_7"
+                android:textSize="17.0sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:textColor="@color/color_8"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:singleLine="true"
+                    android:textColor="@color/color_8"
+                    android:textSize="13.0sp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/pic"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:contentDescription="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/intro"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:lineSpacingExtra="3.5dip"
+                android:textColor="@color/color_8"
+                android:textSize="13.0sp" />
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

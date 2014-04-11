@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8.0dip"
+        android:layout_weight="1.0"
+        android:singleLine="true"
+        android:textColor="@color/color_8"
+        android:textSize="13.0sp" />
+
+    <TextView
+        android:id="@+id/display_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="14.0dip"
+        android:layout_weight="2.0"
+        android:singleLine="true"
+        android:textColor="@color/color_8"
+        android:textSize="13.0sp" />
+    <!-- 
+	<TextView
+        android:id="@+id/item_num_likes"
+        style="@style/NumberInBackground"
+        android:text="12"
+        android:layout_marginRight="4.0dip"
+        android:background="@drawable/ic_unliked" />
+         -->
+    <TextView
+        android:id="@+id/num_comments"
+        style="@style/NumberInBackground"
+        android:background="@drawable/ic_comment" />
+
+</LinearLayout>

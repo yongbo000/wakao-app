@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/footer_bar"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/top_bar_height"
+    android:background="@color/list_bg_color" >
+
+    <TextView
+        android:id="@+id/hot_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:layout_marginRight="10dip"
+        android:text="最热"
+        android:textColor="@color/dark_brown"
+        android:textSize="16.0sp" />
+
+    <TextView
+        android:id="@+id/new_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@id/hot_btn"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:text="最新"
+        android:textColor="@color/dark_brown"
+        android:textSize="16.0sp" />
+
+    <ImageButton
+        android:id="@+id/home_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dip"
+        android:clickable="true"
+        android:background="@drawable/ic_home_normal" />
+
+</RelativeLayout>

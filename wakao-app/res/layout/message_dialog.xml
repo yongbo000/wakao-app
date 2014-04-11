@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="35.0dip"
+        android:paddingLeft="16.0dip"
+        android:paddingRight="16.0dip"
+        android:paddingTop="35.0dip"
+        android:textColor="@color/message_dialog_text"
+        android:textSize="18.5sp" />
+
+    <include
+        android:id="@+id/ok_or_cancel_layout"
+        layout="@layout/ok_or_cancel_buttons_layout" />
+<!-- 
+    <LinearLayout
+        android:id="@+id/vertical_buttons_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10.0dip"
+        android:paddingLeft="16.0dip"
+        android:paddingRight="16.0dip" >
+
+        <ViewStub
+            android:id="@+id/button_stub_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inflatedId="@+id/button_stub_1"
+            android:layout="@layout/vertical_layout_button" />
+
+        <ViewStub
+            android:id="@+id/button_stub_2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:inflatedId="@+id/button_stub_2"
+            android:layout="@layout/vertical_layout_button" />
+
+        <ViewStub
+            android:id="@+id/button_stub_3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.0dip"
+            android:inflatedId="@+id/button_stub_3"
+            android:layout="@layout/vertical_layout_button" />
+    </LinearLayout>
+ -->
+</LinearLayout>

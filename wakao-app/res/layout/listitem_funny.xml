@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/round_corner_layout_item_padding"
+    android:paddingRight="@dimen/round_corner_layout_item_padding"
+    android:paddingTop="@dimen/reader_and_update_item_padding" >
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        style="@style/ArticleItemBg" >
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+            <TextView
+			    android:id="@+id/content"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:ellipsize="end"
+			    android:lineSpacingExtra="3.5dip"
+			    android:textColor="@color/color_7"
+			    android:textSize="17.0sp" />
+            <ImageView
+		        android:id="@+id/pic"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="10dip"
+		        android:layout_marginBottom="10dip" />
+            <include layout="@layout/funnylist_item_informations" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

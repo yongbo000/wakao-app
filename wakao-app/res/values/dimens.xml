@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="top_bar_height">46.0dip</dimen>
+    <dimen name="comment_tab_view_content_height">42.5dip</dimen>
+    <dimen name="comment_dialog_item_end_margin">20.0dip</dimen>
+    <dimen name="sort_popup_height">112.0dip</dimen>
+    <dimen name="sort_popup_width">142.0dip</dimen>
+    <dimen name="round_corner_bg_item_padding">10.0dip</dimen>
+    <dimen name="round_corner_layout_item_padding">8.0dip</dimen>
+    <dimen name="reader_and_update_item_padding">5.0dip</dimen>
+    <dimen name="round_corner_item_height">51.299988dip</dimen>
+    <dimen name="check_box_item_height">41.299988dip</dimen>
+    <dimen name="more_bg_item_padding">12.0dip</dimen>
+    <dimen name="thumbnail_height">66.5dip</dimen>
+    <dimen name="thumbnail_width">86.5dip</dimen>
+    <dimen name="comment_tab_width">90.0dip</dimen>
+    <dimen name="round_avatar_middle_diameter">40.0dip</dimen>
+    <dimen name="round_avatar_diameter">48.0dip</dimen>
+    <dimen name="user_item_height">74.0dip</dimen>
+    <dimen name="setting_title_font_size">16.5sp</dimen>
+    <dimen name="ic_btn_width">80.0dip</dimen>
+    <dimen name="slide_menu_covered_width">80.0dip</dimen>
+    <dimen name="selected_category_line_width">5.0dip</dimen>
+    <dimen name="slidingmenu_offset">60.0dip</dimen>
+    <dimen name="shadow_width">15.0dip</dimen>
+    <dimen name="bottom_menu_height">48.0dip</dimen>
+    <dimen name="top_bar_btn_width">54.0dip</dimen>
+    <dimen name="top_bar_btn_height">30.0dip</dimen>
+    <dimen name="share_item_column_width">56.0dip</dimen>
+    <dimen name="share_item_padding">8.0dip</dimen>
+    <dimen name="more_item_height">55.0dip</dimen>
+</resources>

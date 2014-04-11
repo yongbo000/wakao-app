@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/list_bg_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_bar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:background="@color/list_bg_color"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/round_corner_bg_item_padding" >
+
+            <LinearLayout
+                android:id="@+id/account_settings"
+                style="@style/MoreSettingItem"
+                android:background="@drawable/round_corner_item_single_bg"
+                android:onClick="toLogin" >
+
+                <TextView
+                    style="@style/MoreItemTextStyle"
+                    android:id="@+id/account_name"
+                    android:drawableLeft="@drawable/ic_account"
+                    android:text="@string/myaccount" />
+
+                <TextView
+                    android:id="@+id/account_settings_desc"
+                    style="@style/SettingAttributeText" />
+            </LinearLayout>
+<!-- 
+            <LinearLayout
+                style="@style/MoreSettingItem"
+                android:layout_marginTop="@dimen/round_corner_bg_item_padding"
+                android:background="@drawable/round_corner_item_above_bg"
+                android:onClick="showLoadModeDialog" >
+
+                <TextView
+                    style="@style/MoreItemTextStyle"
+                    android:drawableLeft="@drawable/ic_image_load_mode"
+                    android:text="@string/image_load_mode" />
+
+                <TextView
+                    android:id="@+id/load_mode_desc"
+                    style="@style/SettingAttributeText" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextSettingItem"
+                android:background="@drawable/round_corner_item_middle_bg"
+                android:drawableLeft="@drawable/ic_download_pressed"
+                android:onClick="offlineDownload"
+                android:text="@string/offline_download" />
+
+            <LinearLayout
+                style="@style/MoreSettingItem"
+                android:background="@drawable/round_corner_item_middle_bg_normal" >
+
+                <TextView
+                    style="@style/MoreItemTextStyle"
+                    android:drawableLeft="@drawable/ic_brightness"
+                    android:text="@string/brightness" />
+
+                <SeekBar
+                    android:id="@+id/seek_bar"
+                    style="@style/CustomSeekBar"
+                    android:layout_width="147.0dip"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+ -->
+            
+
+			<TextView
+                style="@style/TextSettingItem"
+                android:layout_marginTop="@dimen/round_corner_bg_item_padding"
+                android:background="@drawable/round_corner_item_above_bg"
+                android:drawableLeft="@drawable/ic_app_normal"
+                android:text="应用推荐" />
+			
+			<TextView
+                style="@style/TextSettingItem"
+                android:id="@+id/checkUpdate"
+                android:background="@drawable/round_corner_item_middle_bg"
+                android:drawableLeft="@drawable/ic_download_pressed"
+                android:text="检测更新" />
+			
+			<LinearLayout
+                style="@style/MoreSettingItem"
+                android:background="@drawable/round_corner_item_below_bg"
+                android:onClick="clearCache" >
+
+                <TextView
+                    style="@style/MoreItemTextStyle"
+                    android:drawableLeft="@drawable/ic_clear_cache"
+                    android:text="@string/clear_cache" />
+
+                <TextView
+                    android:id="@+id/cache_size"
+                    style="@style/SettingAttributeText"
+                    android:drawableRight="@null" />
+            </LinearLayout>
+			
+            <TextView
+                style="@style/TextSettingItem"
+                android:onClick="toAboutUs"
+                android:layout_marginTop="@dimen/round_corner_bg_item_padding"
+                android:background="@drawable/round_corner_item_above_bg"
+                android:drawableLeft="@drawable/ic_about_us"
+                android:text="@string/about_us" />
+
+            <TextView
+                style="@style/TextSettingItem"
+                android:onClick="toFeedback"
+                android:background="@drawable/round_corner_item_below_bg"
+                android:drawableLeft="@drawable/ic_feedback"
+                android:text="@string/feedback" />
+            
+            
+
+            <TextView
+                android:id="@+id/logout"
+                style="@style/TextSettingItem"
+                android:layout_marginTop="@dimen/round_corner_bg_item_padding"
+                android:background="@drawable/round_corner_item_single_bg"
+                android:drawableLeft="@drawable/ic_account"
+                android:onClick="toLogout"
+                android:visibility="gone"
+                android:text="@string/logout" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

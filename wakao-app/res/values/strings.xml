@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">哇靠百科</string>
+    <string name="menu_settings">Settings</string>
+    
+    
+    <string name="pull_to_refresh_pull_label">下拉可以刷新</string>
+    <string name="pull_to_refresh_release_label">松开可以刷新</string>
+    <string name="pull_to_refresh_refreshing_label">正在加载</string>
+    <string name="pull_to_refresh_tap_label">下拉可以刷新</string>
+    <string name="pull_to_refresh_update">最近更新：</string>
+
+    
+    <string name="load_more">更多</string>
+    <string name="load_ing">加载中···</string>
+    <string name="load_full">已加载全部</string>
+    <string name="load_empty">暂无数据</string>
+    <string name="load_error">加载数据出错</string>
+    
+    
+    
+    <!-- setting -->
+    <string name="image_load_mode">图片加载</string>
+    <string name="offline_download">离线下载</string>
+    <string name="article_text_size">文章字体大小</string>
+    <string name="clear_cache_msg">确定要清除缓存吗?</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="about_us">关于我们</string>
+    <string name="feedback">意见反馈</string>
+    <string name="logout">退出</string>
+    <string name="login_out_msg">确定要退出当前帐号吗?</string>
+    <string name="offline_download_on_not_wifi_tip">当前网络不是WIFI，是否继续？</string>
+    <string name="progressing_text_clear_cache">正在清除缓存</string>
+    <string name="feedback_hint">我们用心聆听来自您的声音…</string>
+    <string name="toast_feedback_success">发送反馈成功</string>
+    <string name="toast_feedback_failed">发送反馈失败，稍候再试</string>
+    <string name="download_progress">下载总进度</string>
+    <string name="stop_downlaoding">停止下载</string>
+    <string name="canceled">已取消</string>
+    <string name="unfinished">未完成</string>
+    <string name="start_to_downlaod">开始下载</string>
+    <string name="offline_download_mode">离线下载模式</string>
+    <string name="timing_download">定时下载（仅wifi下）</string>
+    <string name="download_time">下载时间</string>
+    <string name="brightness">屏幕亮度</string>
+    <string name="settings">设置</string>
+    <string name="myaccount">我的帐号</string>
+    
+</resources>

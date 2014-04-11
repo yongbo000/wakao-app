@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top_bar"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/list_bg_color"
+        android:paddingLeft="@dimen/round_corner_bg_item_padding"
+        android:paddingRight="@dimen/round_corner_bg_item_padding" >
+
+        <TextView
+            android:id="@+id/top_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:textColor="@color/dark_brown"
+            android:textSize="20.0sp" />
+
+        <ImageButton
+                android:id="@+id/m_toggle"
+                android:onClick="toggleMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/menu_btn"/>
+        <ImageButton
+                android:id="@+id/go_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:background="@drawable/back_btn"/>
+    </RelativeLayout>
+
+    <include layout="@layout/top_bar_shadow" />
+
+</LinearLayout>

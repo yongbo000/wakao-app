@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <title></title>
+        <style type="text/css">
+            * { margin: 0; padding: 0;}
+            body { font: 12px/1.2 'Microsoft YaHei'; color: #333;}
+            .wrap { margin: 10px; }
+            .aw-01 { position: absolute; right: 0; top: 0;}
+            .css-aw { display: block; height: 0; width: 0; border-color: transparent; border-right-color: #fff; border-style: solid; border-width: 14px; border-left-width: 0;  }
+            .funny { padding-bottom: 10px; font-size: 14px;}
+            .funny .txt { color: #555; line-height: 1.8; font-size:16px;}
+            .funny .txt:first-letter { font-size:24px; font-weight:700; margin-right:3px;}
+            .funny img { display: none; max-width:100%; margin: 0 auto;}
+            
+            .comment-area { margin: 0 -10px;}
+            .comment-area .comment-count { position: relative; width: 90px; line-height: 28px; height: 28px; padding-left: 15px; background-color: #664a4a; color: #fff; font-weight: 500;}
+            .comment-list .li { padding: 10px; border-bottom: 1px #ddd dashed; color: #000;}
+            .comment-list .li p { line-height: 20px; }
+            .comment-list .li-shang { color: #555; }
+            .comment-list .li-shang span { margin-right:5px; }
+            .comment-list .li-xia { padding-top:5px; padding-left:20px; font-size:14px; }
+            .nobody {padding:10px 20px; text-align:center; height:40px; line-height:28px; font-size:16px;color:#999;}
+            
+            .loading { display:none; background:url(images/loading.gif) center center no-repeat; height:40px;}
+            .loading2 { display:block; background:url(images/loading2.gif) 0 0 no-repeat; padding-left:40px; height:32px; line-height:32px; position:absolute; top:50%; left:50%; margin-left:-60px; margin-top:-20px;}
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="funny">
+                <p id="content" class="txt"></p>
+                <div id="loading" class="loading"></div>
+                <img id="pic" alt="加载失败" />
+            </div>
+            <div class="comment-area">
+                <h3 class="comment-count"><span id="count">0</span>条评论<span class="css-aw aw-01"></span></h3>
+                <div id="c_list" class="comment-list">
+                	<p class="nobody">啊哟，还木有人评论呀!<br/>快来抢沙发呀!</p>
+                </div>
+                <div id="loading2" class="loading"></div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var loading = document.getElementById('loading');
+            var loading2 = document.getElementById('loading2');
+            var c_list = document.getElementById('c_list');
+            var count = document.getElementById('count');
+            function setPic(src) {
+            	var pic = document.getElementById('pic');
+                pic.src = src;
+                pic.style.display = 'block';
+                loading.style.display = 'none';
+            }
+            function setFunny(obj){
+                var content = document.getElementById('content');
+                var pic = document.getElementById('pic');
+                
+                content.innerHTML = obj.content;
+                count.innerHTML = obj.comment_count;
+                if(obj.pic.length > 0){
+                	loading.style.display = 'block';
+                	Tool.loadPic();
+                }
+                loading2.style.display = 'block';
+                Tool.initComment();
+            }
+            function getList(comment, row){
+                return [
+                    '<div class="li">',
+                        '<p class="li-shang">',
+                            '<span>'+row+'楼</span>',
+                            '<span>'+comment['user_name']+'</span>',
+                        '</p>',
+                        '<p class="li-xia">'+comment['content']+'</p>',
+                    '</div>'
+                ].join('');
+            }
+            function setComments(response){
+            	loading2.style.display = 'none';
+	            if(response.msg == 'success'){
+	            	var data = response.data;
+	            	var html = '';
+		            for(var i=0;i<data.length;i++){
+		                html += getList(data[i], i+1);
+		            }
+		            c_list.innerHTML = html;
+		            count.innerHTML = data.length;
+	            }
+            }
+            function addComment(response){
+	            if(response.msg == 'success'){
+	            	Tool.initComment();
+	            	count.innerHTML = parseInt(count.innerHTML) + 1;
+	            	window.scroll(0,document.body.scrollHeight);
+	            }
+            }
+            window.load = Tool.initPage();
+        </script>
+    </body>
+</html>

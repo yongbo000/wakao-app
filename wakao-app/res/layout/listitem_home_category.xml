@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listitembg"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/round_corner_layout_item_padding"
+    android:paddingRight="@dimen/round_corner_layout_item_padding"
+    android:paddingTop="@dimen/reader_and_update_item_padding" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/cat_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xiao"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="10dip" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_10"
+            android:text="" />
+    </RelativeLayout>
+
+    <include layout="@layout/top_bar_shadow" />
+
+</LinearLayout>
