@@ -1,0 +1,194 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <!-- menu part -->
+    <style name="menu_item">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/channel_list_item_bg</item>
+        <item name="android:onClick">OnChannelSelected</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="menu_item_icon">
+        <item name="android:layout_width">20.0dip</item>
+        <item name="android:layout_height">20.0dip</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginRight">16.0dip</item>
+        <item name="android:contentDescription">@null</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+    <style name="exit_icon">
+        <item name="android:layout_width">32.0dip</item>
+        <item name="android:layout_height">32.0dip</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginRight">16.0dip</item>
+        <item name="android:contentDescription">@null</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="menu_item_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">13.0dip</item>
+        <item name="android:layout_marginTop">13.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">18.0sp</item>
+    </style>
+
+    <style name="pege_item_bg">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">12.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">94.0dip</item>
+        <item name="android:onClick">toDetail</item>
+    </style>
+    <!-- pull to refresh listview -->
+    <style name="loading_small" parent="@android:style/Widget.ProgressBar.Small">
+        <item name="android:indeterminateDrawable">@anim/loading</item>
+        <item name="android:layout_width">21dip</item>
+        <item name="android:layout_height">21dip</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="widget_listview">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:divider">@null</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:scrollingCache">false</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+    </style>
+
+    <!-- listview item -->
+    <style name="ArticleItemBg">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/round_corner_item_single_bg</item>
+        <item name="android:padding">12.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">94.0dip</item>
+        <item name="android:onClick">toDetail</item>
+    </style>
+
+    <style name="NumberInBackground">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/color_8</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">right</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- dialog -->
+    <style name="CustomDialog" parent="@android:style/Theme.Holo.Dialog.NoActionBar.MinWidth">
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+    </style>
+    <!-- setting -->
+    <style name="SettingItemText">
+        <item name="android:textSize">16.5sp</item>
+        <item name="android:textColor">@color/settings_entry</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="SettingAttributeText">
+        <item name="android:textSize">16.5sp</item>
+        <item name="android:textColor">@color/settings_attribute</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">5.0dip</item>
+    </style>
+
+    <style name="SettingLayout">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/round_corner_item_single_bg</item>
+        <item name="android:paddingLeft">@dimen/more_bg_item_padding</item>
+        <item name="android:paddingRight">@dimen/more_bg_item_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/round_corner_item_height</item>
+        <item name="android:layout_marginTop">@dimen/round_corner_bg_item_padding</item>
+    </style>
+
+    <style name="MoreSettingItem">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/more_bg_item_padding</item>
+        <item name="android:paddingRight">@dimen/more_bg_item_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/round_corner_item_height</item>
+    </style>
+
+    <style name="TextSettingItem">
+        <item name="android:textSize">16.5sp</item>
+        <item name="android:textColor">@color/settings_entry</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/more_bg_item_padding</item>
+        <item name="android:paddingRight">@dimen/more_bg_item_padding</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/round_corner_item_height</item>
+        <item name="android:drawablePadding">12.5dip</item>
+    </style>
+
+    <style name="MoreItemTextStyle">
+        <item name="android:textSize">16.5sp</item>
+        <item name="android:textColor">@color/settings_entry</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">@dimen/round_corner_item_height</item>
+        <item name="android:drawablePadding">12.5dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="CustomSeekBar" parent="@android:style/Widget.SeekBar">
+        <item name="android:paddingLeft">12.0dip</item>
+        <item name="android:paddingRight">12.0dip</item>
+        <item name="android:focusable">true</item>
+        <item name="android:maxHeight">7.0dip</item>
+        <item name="android:progressDrawable">@drawable/seekbar_progress</item>
+        <item name="android:minHeight">7.0dip</item>
+        <item name="android:thumb">@drawable/seekbar_handle</item>
+        <item name="android:thumbOffset">12.0dip</item>
+    </style>
+
+    <!-- comment bar -->
+    <style name="main_footbar_cutline">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="main_footbar_image">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">5dip</item>
+        <item name="android:layout_marginLeft">10dip</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+</resources>

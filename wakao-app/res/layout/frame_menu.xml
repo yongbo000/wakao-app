@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/channel_top_bar_bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include layout="@layout/menu_top_bar" />
+        <!-- channel list -->
+
+        <LinearLayout
+            android:id="@+id/toHome"
+            style="@style/menu_item"
+            android:tag="首页" >
+
+            <ImageView
+                style="@style/menu_item_icon"
+                android:src="@drawable/ic_shou" />
+
+            <TextView
+                style="@style/menu_item_title"
+                android:text="首页" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/toFunny"
+            style="@style/menu_item"
+            android:tag="笑务处" >
+
+            <ImageView
+                style="@style/menu_item_icon"
+                android:src="@drawable/ic_xiao" />
+
+            <TextView
+                style="@style/menu_item_title"
+                android:text="笑务处" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/toGirl"
+            style="@style/menu_item"
+            android:tag="妹子图" >
+
+            <ImageView
+                style="@style/menu_item_icon"
+                android:src="@drawable/ic_girl" />
+
+            <TextView
+                style="@style/menu_item_title"
+                android:text="妹子图" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/toArticle"
+            style="@style/menu_item"
+            android:tag="涨姿势" >
+
+            <ImageView
+                style="@style/menu_item_icon"
+                android:src="@drawable/ic_zhang" />
+
+            <TextView
+                style="@style/menu_item_title"
+                android:text="涨姿势" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/toArticle_NBA"
+            style="@style/menu_item"
+            android:tag="热血篮球" >
+
+            <ImageView
+                style="@style/menu_item_icon"
+                android:src="@drawable/ic_qiu" />
+
+            <TextView
+                style="@style/menu_item_title"
+                android:text="热血篮球" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" >
+            <LinearLayout
+                android:id="@+id/toExit"
+                style="@style/menu_item"
+                android:layout_alignParentBottom="true"
+                android:tag="退出" >
+                <ImageView
+                    style="@style/exit_icon"
+                    android:src="@drawable/exit" />
+                <TextView
+                    style="@style/menu_item_title"
+                    android:text="退出程序" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!--
+		<LinearLayout
+		    android:id="@+id/toRing"
+		    android:tag="实验项目"
+		    style="@style/menu_item" >
+		    <ImageView
+		        android:src="@drawable/icon"
+		        style="@style/menu_item_icon" />
+		    <TextView
+		        android:text="实验项目"
+		        style="@style/menu_item_title" />
+		</LinearLayout>        -->
+    </LinearLayout>
+
+</FrameLayout>
