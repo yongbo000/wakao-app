@@ -15,7 +15,7 @@
 
 ## Server端基于NodeJS
 
-～～时间问题，Server端源码暂不开放，在这月底我将整理好Server端代码并开源出来。～～
+~~时间问题，Server端源码暂不开放，在这月底我将整理好Server端代码并开源出来。~~
 
 Server端源码：
 [查看server端源码](https://github.com/yongbo000/wakao-server)
